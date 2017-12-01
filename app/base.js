@@ -30,7 +30,7 @@ $(function() {
 
     var obj = {
         "video": {
-            "value": "<iframe title='YouTube video player' type=\"text/html\" width='640' height='390' src='http://www.youtube.com/embed/TTOKvj9sQZg' frameborder='0' allowFullScreen></iframe>"
+            "value": "<iframe title='YouTube video player' type=\"text/html\" width='640' height='390' src='https://www.youtube.com/embed/TTOKvj9sQZg' frameborder='0' allowFullScreen></iframe>"
         }
     };
 
