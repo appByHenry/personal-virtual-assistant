@@ -5,6 +5,10 @@
 
   .blockDisplay {
     display: block !important; } }
+.base-container {
+  max-width: 1280px;
+  margin: 0 auto; }
+
 .scroll-class {
   width: 100%;
   border: 1px solid #f5f5f5;
@@ -61,6 +65,9 @@ section#top-header {
   top: -20px;
   z-index: 1;
   width: 100%; }
+  @media (min-width: 1281px) {
+    section#top-header {
+      width: 1294px; } }
 
 .hero-img-holder {
   display: block;
@@ -750,13 +757,24 @@ section#contact-us {
     section#contact-us {
       margin: 50px 100px 50px; } }
 
+textarea.form-input {
+  height: 100px;
+  padding: 5px; }
+  @media (min-width: 375px) and (max-width: 599px) {
+    textarea.form-input {
+      height: 70px; } }
+
 .form-input {
   width: 75%;
-  height: 25px;
-  border: 0.01em solid #6b6c6d; }
+  height: 30px;
+  padding: 0px 5px;
+  border-radius: 4px; }
   @media (min-width: 375px) and (max-width: 599px) {
     .form-input {
       width: 100%; } }
+
+.required-style {
+  background-color: #fff3ee; }
 
 .icon-align {
   text-align: center;
