@@ -221,7 +221,7 @@ $(function() {
             Dbdata = JSON.stringify(Dbdata);
             console.log(Dbdata);
             //https://pvr-virtual-assistant.herokuapp.com/
-            /*      
+                
             $.ajax({
                 type: 'POST',
                 contentType: "application/json; charset=utf-8",
@@ -233,9 +233,11 @@ $(function() {
                 complete: function() {
                     //called when complete
                     console.log('SAve new guest api campleed');
+
                 },
                 success: function(res) {
                     console.log(res);
+                    alert(" Thank you very much for your interest. We will connect with you soon. ");
 
                 },
                 error: function() {
@@ -243,7 +245,7 @@ $(function() {
                     console.log("Error while storing guest data");
                 },
             });
-            */
+            
         }
         else
         {
