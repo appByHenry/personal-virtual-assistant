@@ -23,8 +23,16 @@
     <div class="base-container">
         <section id="top-header">
             <div class="logo-div">
-                <div id="logo">Perosnal Virtual Assistant</div>
-                <div id="logo-sub-text">Powered by Artificial of Intelligence (AoE)</div>
+                <div class="logo-inline">
+                    <div class="logo-aoe">
+                        <img class="hero-img" src="assets/ai-logo-icon.jpg" alt="Google home image">
+                    </div>
+                </div>
+                <div class="logo-text-style">
+                    <div id="logo">AoE Machine Inc</div>
+                    <div id="logo-sub-text">Powered by Artificial of Intelligence (AoE)</div>
+                </div>
+                
             </div>
             <div class="btn-holder">
                 <div id="contact-btn">
@@ -46,7 +54,7 @@
             <div class="hero-img-holder">
                 <img class="hero-img" src="assets/hero-img.png" alt="Google home image">
                 <div class="overlay-txt">
-                    <div class="tagline-txt">Meet Personal Virtual Assistant</div>
+                    <div class="tagline-txt">Meet AoE Machine</div>
                     <div id="h-domain" class="blinking-div">{Healthcare Domain}</div>
                     <div id="i-domain" class="blinking-div">{Insurance Domain}</div>
                 </div>
@@ -156,17 +164,24 @@
                 </div>
             </div>
         </section>
-         <section id="subscribe-div" class="email-subscribe-holder">
+        <section id="subscribe-div" class="email-subscribe-holder">
             <div class="email-subscribe-txt">Subscribe with us for latest feature of personal virtual assistant.</div>
             <div class="email-txtbox">
-                <div class="subscribe-txtbox"><input class="form-input" type="text" name="name"></div>
-                <div class="subscribe-btn"><button id="subscribe-button">Subscribe Email</button></div>
+                <div class="subscribe-txtbox">
+                    <input class="form-input" type="text" name="name">
+                </div>
+                <div class="subscribe-btn">
+                    <button id="subscribe-button">Subscribe Email</button>
+                </div>
             </div>
         </section>
-        <section id="demo-video">
-            <div id="video-heading"> Watch the demo of working prototype.</div>
-            <div id="video-holder">
-                <div id="video-container"></div>
+        <section id="demo-tech-arch">
+            <div class="text-arch"> Technical Implementation </div>
+            <div class="amazon-tech-img">
+                <img class="tech-img" src="assets/amazon-tech-arch.png" alt="Google home image">
+            </div>
+            <div class="google-tech-img">
+                <img class="tech-img" src="assets/google-home-tech.png" alt="Google home image">
             </div>
         </section>
         <section id="contact-us">
@@ -174,30 +189,31 @@
                 <div class="contact-heading ">Want to know more? Contact us.</div>
                 <div class="message-icon icon-align"></div>
             </div>
-            <div class="contact-form"> 
+            <div class="contact-form">
                 <div class="row-style">
-                    <span class="lbl-form"><label>Name </label></span><span class="span-input"><input id="" class="form-input required-style" type="text" name="name"></span>
+                    <span class="lbl-form"><label>Name </label></span><span class="span-input"><input id="usrname" class="form-input required-style" type="text" name="name" placeholder="Enter your name (Only alphabet and one space)"></span>
                 </div>
                 <div class="row-style">
-                    <span class="lbl-form"><label>Phone No </label></span><span class="span-input"><input class="form-input" type="tel" name="phone"></span>
+                    <span class="lbl-form"><label>Phone No </label></span><span class="span-input"><input id="phone" class="form-input" type="tel" name="phone" placeholder="Phone Number (Only Numeric)" maxlength="10"></span>
                 </div>
                 <div class="row-style">
-                    <span class="lbl-form"><label>Email </label></span><span class="span-input"><input class="form-input required-style" type="text" name="email"></span>
+                    <span class="lbl-form"><label>Email </label></span><span class="span-input"><input id="mail" class="form-input required-style" type="text" name="email" placeholder="Enter Email"></span>
                 </div>
                 <div class="row-style">
-                    <span class="lbl-form"><label>Comments </label></span><span class="span-input"><textarea rows="6" class="form-input"  name="comments"></textarea></span>
+                    <span class="lbl-form"><label>Comments </label></span><span class="span-input"><textarea id="comment" rows="6" class="form-input"  name="comments" placeholder="Add your comments."></textarea></span>
                 </div>
                 <div class="send-btn-holder">
                     <button id="send-button">Send</button>
                 </div>
-                
-            <div>
+                <div>
         </section>
         <section id="footer">
-            <div><hr class="hr-color"> </div>
-            <div class="footer-txt"> All rights reserved by ABC-Virtuality @USA - 2017<div>
+            <div>
+                <hr class="hr-color"> </div>
+            <div class="footer-txt"> All rights reserved by ABC-Virtuality @USA - 2017
+                <div>
         </section>
-    </div>
+        </div>
 </body>
 
 </html>

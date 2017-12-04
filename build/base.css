@@ -9,6 +9,52 @@
   max-width: 1280px;
   margin: 0 auto; }
 
+.inputErrClass {
+  background-color: #f97272d4 !important;
+  border: 1px solid orange; }
+
+@media (min-width: 375px) and (max-width: 599px) {
+  .nav {
+    top: 10px; } }
+
+@media (min-width: 375px) and (max-width: 599px) {
+  .nav .main-nav .hamburger-nav::after {
+    font-size: 1.5rem !important; } }
+
+.logo-inline {
+  display: inline-block; }
+  @media (min-width: 375px) and (max-width: 599px) {
+    .logo-inline {
+      width: 18%;
+      margin-right: 2%; } }
+  @media (min-width: 600px) and (max-width: 1023px) {
+    .logo-inline {
+      width: 20%;
+      margin-right: 2%; } }
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    .logo-inline {
+      width: 15%;
+      margin-right: 2%; } }
+  @media (min-width: 1280px) {
+    .logo-inline {
+      width: 13%;
+      margin-right: 2%; } }
+
+.logo-text-style {
+  display: inline-block; }
+  @media (min-width: 375px) and (max-width: 599px) {
+    .logo-text-style {
+      display: none; } }
+  @media (min-width: 600px) and (max-width: 1023px) {
+    .logo-text-style {
+      width: 76%; } }
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    .logo-text-style {
+      width: 76%; } }
+  @media (min-width: 1280px) {
+    .logo-text-style {
+      width: 76%; } }
+
 .scroll-class {
   width: 100%;
   border: 1px solid #f5f5f5;
@@ -29,7 +75,7 @@ div#logo {
   color: #6b6b6b; }
   @media (min-width: 600px) and (max-width: 1023px) {
     div#logo {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       font-family: sans-serif;
       font-variant: common-ligatures;
       font-weight: 300;
@@ -168,6 +214,9 @@ div#contact-btn {
   border-radius: 5px;
   box-shadow: 2px 0px 10px 0px #cccccc;
   margin-top: 80px; }
+  @media (min-width: 375px) and (max-width: 599px) {
+    #introduction {
+      margin-top: 60px; } }
 
 .top-bottom-space {
   margin-top: 20px; }
@@ -630,6 +679,7 @@ section#amazon-scenarios {
   border-radius: 6px;
   width: 70%; }
 
+/*================== ======================*/
 #subscribe-div {
   text-align: center;
   padding: 80px 0px;
@@ -650,6 +700,7 @@ section#amazon-scenarios {
 .subscribe-txtbox {
   margin-bottom: 20px; }
 
+/*=================== ============================*/
 .message-icon::after {
   font-family: fontawesome;
   content: "\f003";
@@ -706,41 +757,58 @@ button#send-button,
   font-size: 1rem;
   cursor: pointer; }
 
-div#video-holder {
-  width: 100%;
-  display: block;
-  text-align: center; }
+.amazon-tech-img {
+  width: 49.5%;
+  display: inline-block; }
+  @media (min-width: 375px) and (max-width: 599px) {
+    .amazon-tech-img {
+      width: 100%;
+      display: block; } }
+  @media (min-width: 600px) and (max-width: 1023px) {
+    .amazon-tech-img {
+      width: 100%;
+      display: block; } }
 
-#video-container iframe,
-#video-container object,
-#video-container embed {
-  height: 1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
+.google-tech-img {
+  width: 49.5%;
+  display: inline-block; }
+  @media (min-width: 375px) and (max-width: 599px) {
+    .google-tech-img {
+      width: 100%;
+      display: block; } }
+  @media (min-width: 600px) and (max-width: 1023px) {
+    .google-tech-img {
+      width: 100%;
+      display: block; } }
 
-div#video-container {
-  width: 100%;
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 30px;
-  height: 0;
-  overflow: hidden; }
+.tech-img {
+  width: 100%; }
 
-#video-heading {
-  font-size: 1.5rem;
+.text-arch {
+  font-size: 2.4rem;
   font-family: sans-serif;
   font-variant: common-ligatures;
   font-weight: 200;
   color: #6b6c6d;
-  padding: 2% 0px;
-  text-align: center; }
+  text-align: center;
+  padding: 20px 0px; }
+  @media (min-width: 375px) and (max-width: 599px) {
+    .text-arch {
+      font-size: 1.4rem;
+      font-family: sans-serif;
+      font-variant: common-ligatures;
+      font-weight: 200;
+      color: #6b6c6d;
+      padding: 10px 0px; } }
+  @media (min-width: 600px) and (max-width: 1023px) {
+    .text-arch {
+      font-size: 2rem;
+      font-family: sans-serif;
+      font-variant: common-ligatures;
+      font-weight: 200;
+      color: #6b6c6d;
+      padding: 15px 0px; } }
 
-@media (min-width: 1024px) {
-  section#demo-video {
-    padding: 0px 10%; } }
 .send-btn-holder {
   text-align: center;
   margin-top: 40px; }
