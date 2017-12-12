@@ -32,8 +32,30 @@ $(function() {
 
     var myInterval = setInterval(function() {
 
-        $('.overlay-txt > .blinking-div').toggle(selectedEffect, null, 500);
+        //$('.overlay-txt > .blinking-div').toggle(selectedEffect, null, 500);
     }, 2000);
+
+    //=================================================================================
+    //=========== This is for toggle top banner ======================================
+
+    var counter = 0,
+        divs = $('#h-domain, #i-domain');
+
+    function showDiv () {
+        divs.hide() // hide all divs
+            .filter(function (index) { return index == counter % 3; }) // figure out correct div to show
+            .show('slow'); // and show it
+
+        counter++;
+    }; // function to loop through divs and show correct div
+
+    showDiv(); // show first div    
+
+    setInterval(function () {
+        showDiv(); // show next div
+    }, 3 * 1000); // do this every 10 seconds    
+
+    //===================================================================================
 
     console.log("On page lopad");
     $('.slider-class-amazon').slick({
