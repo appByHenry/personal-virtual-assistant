@@ -1,6 +1,20 @@
 $(function() {
 
+    //$( "#_myModalVR" ).dialog();
+    var modal = $("#_myModalVR");
+    //$("#_myModalVR").dialog();
 
+    function modalDialog(modalText) {
+        $("#error-id").text(modalText);
+        $("#_myModalVR").dialog({
+            modal: true,
+            buttons: {
+                Ok: function() {
+                    $(this).dialog("close");
+                }
+            }
+        });
+    }
 
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
@@ -38,7 +52,7 @@ $(function() {
 
     $("#video-container").html(obj.video.value);
 
-    function validateName(name) { 
+    function validateName(name) {
         var regexValidName = new RegExp("^[a-zA-Z ]*$");
 
         if (regexValidName.test(name)) {
@@ -131,9 +145,11 @@ $(function() {
                     $input.removeClass("inputErrClass");
                 } else {
                     $input.addClass("inputErrClass");
+                    modalDialog("Email format is not correct.");
                 }
             } else {
                 $input.addClass("inputErrClass");
+                modalDialog("Email format is not correct.");
             }
         } else if (skipPhone == "usrname") {
             if ($input.val() && $input.val() != 'undefined') {
@@ -142,13 +158,16 @@ $(function() {
                         $input.removeClass("inputErrClass");
                     } else {
                         $input.addClass("inputErrClass");
+                        modalDialog("UserName format is not correct.");
                     }
                 } else {
                     $input.addClass("inputErrClass");
+                    modalDialog("UserName format is not correct.");
                 }
 
             } else {
                 $input.addClass("inputErrClass");
+                modalDialog("UserName format is not correct.");
             }
         } else if (skipPhone == "phone") {
             if ($input.val() && $input.val() != 'undefined') {
@@ -157,9 +176,11 @@ $(function() {
                         $input.removeClass("inputErrClass");
                     } else {
                         $input.addClass("inputErrClass");
+                        modalDialog("Phone number format is not correct.");
                     }
                 } else {
                     $input.addClass("inputErrClass");
+                    modalDialog("Phone number format is not correct.");
                 }
 
             } else {
@@ -169,6 +190,13 @@ $(function() {
 
     }
 
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 
 
     $(document).on("click", "#send-button", function() {
@@ -208,7 +236,7 @@ $(function() {
                 } else if (skipPhone == "usrname") {
                     usrObj.username = $(this).val();
                     user_key = $(this).val() + "--" + datetime;
-                    usrObj.id = $(this).val().substr(0, 2)+"-"+rand;
+                    usrObj.id = $(this).val().substr(0, 2) + "-" + rand;
                 } else if (skipPhone == "phone") {
                     usrObj.phone = $(this).val();
                 }
@@ -221,7 +249,7 @@ $(function() {
             Dbdata = JSON.stringify(Dbdata);
             console.log(Dbdata);
             //https://pvr-virtual-assistant.herokuapp.com/
-                
+
             $.ajax({
                 type: 'POST',
                 contentType: "application/json; charset=utf-8",
@@ -237,18 +265,16 @@ $(function() {
                 },
                 success: function(res) {
                     console.log(res);
-                    alert(" Thank you very much for your interest. We will connect with you soon. ");
+                    modalDialog("Thank you very much for your interest. We will connect with you soon.");
 
                 },
                 error: function() {
                     // Data not found in json want to offer for new user.
-                    console.log("Error while storing guest data");
+                     modalDialog("Thank you very much for your interest. Something wrong with the network. Please submit one more time.");
                 },
             });
-            
-        }
-        else
-        {
+
+        } else {
             alert("Something wrong with form input.Please correct it and submit again.");
         }
 
