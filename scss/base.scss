@@ -1,0 +1,980 @@
+// This is the base scss file.
+$mobile-width: 375px;
+$tablet-width: 600px;
+$desktop-width: 1024px;
+$large-desktop-width: 1280px;
+$ipad-width: 768px;
+
+$tablet-medium: 800px;
+
+
+// Mobile design
+@media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {}
+
+
+@media (min-width: #{$desktop-width}) and (max-width: #{$large-desktop-width - 1px}) {}
+
+@media (min-width: #{$large-desktop-width}) {}
+
+
+@media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    section#app-extension {
+        margin: 30px 0px;
+        text-align: center;
+    }
+    .blockDisplay {
+        display: block !important;
+    }
+}
+
+.base-container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.inputErrClass{
+    background-color: #f97272d4 !important;
+    border: 1px solid orange;
+}
+
+.nav{
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+         top: 10px;
+    }
+}
+.nav .main-nav .hamburger-nav::after{
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+         font-size: 1.5rem !important;
+    }
+}
+// logo style
+.logo-inline {
+    display: inline-block;
+
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+         width: 18%;
+        margin-right: 2%;
+    }
+    
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        width: 20%;
+        margin-right: 2%;
+    }
+    @media (min-width: #{$desktop-width}) and (max-width: #{$large-desktop-width - 1px}) {
+        width: 15%;
+        margin-right: 2%;
+    }
+    @media (min-width: #{$large-desktop-width}) {
+        width: 13%;
+        margin-right: 2%;
+    }
+}
+
+.logo-text-style {
+    display: inline-block;
+
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        display: none;
+    }
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        width: 76%;
+    }
+    @media (min-width: #{$desktop-width}) and (max-width: #{$large-desktop-width - 1px}) {
+        width: 76%;
+    }
+     @media (min-width: #{$large-desktop-width}) {
+        width: 76%;
+    }
+}
+
+@mixin common_typography($f-size, $f-bold, $f-color, $f-lineheight) {
+    font-size: $f-size;
+    font-family: sans-serif;
+    font-variant: common-ligatures;
+    font-weight: $f-bold;
+    color: $f-color;
+    line-height: $f-lineheight;
+}
+
+
+@mixin va-reply-style($va-color) {
+    display: inline-block;
+    width: 55%;
+    background: white;
+    padding: 15px 10px 15px 15px;
+    border-radius: 10px;
+    margin-left: 10px;
+    color: $va-color;
+    vertical-align: top;
+}
+
+.scroll-class {
+    width: 100%;
+    border: 1px solid #f5f5f5;
+    background: white;
+    box-shadow: 15px 0px 15px 5px #cccccc;
+}
+
+
+.border-class-top{
+    border: 2px solid #e0dcdc;
+}
+
+.hero-img {
+    width: 100%;
+}
+
+.base-container {
+
+    // margin: 20px 10px;
+}
+
+.inlineDisplay {
+    display: inline-block;
+}
+
+div#logo {
+
+    @include common_typography(2rem, 400, #6b6b6b, null); //display: inline-block;
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @include common_typography(1.3rem, 300, #6b6b6b, null);
+    }
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        @include common_typography(1.2rem, 200, #6b6b6b, null);
+    }
+}
+
+div#logo-sub-text {
+    //display: inline-block;
+    @include common_typography(0.9rem, 400, #6b6b6b, null);
+}
+
+.heading-2-style {
+    @include common_typography(2.5rem, 400, #6b6b6b, 3.5rem);
+}
+
+section#top-header {
+    position: fixed;
+    padding: 30px 0px 30px;
+    /* position: relative; */
+    height: 38px;
+    top: -20px;
+    z-index: 1;
+    width: 100%;
+    @media (min-width: #{$large-desktop-width + 1px}) {
+        width: 1294px;
+    }
+}
+
+@mixin backgroundImage($imgpath, $position:0 0, $repeat: no-repeat) {
+    background: {
+        image: url($imgpath);
+        position: $position;
+        repeat: $repeat;
+    }
+}
+
+.hero-img-holder {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.overlay-txt {
+    position: absolute;
+    display: block;
+    top: 25%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    color: white;
+    text-shadow: 0em 0.5em 1em rgb(255, 255, 255);
+
+    @media (min-width: #{$tablet-width}) and (max-width: #{ipad-width - 1px}) {
+        text-shadow: 0em 0.2em 0.8em rgb(255, 255, 255);
+    }
+    @media (min-width: #{$ipad-width}) and (max-width: #{$desktop-width - 1px}) {
+        text-shadow: 0em 0.2em 0.8em rgb(255, 255, 255);
+    }
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        text-shadow: 0em 0.2em 0.5em rgb(255, 255, 255);
+    }
+}
+
+#i-domain {
+    display: none;
+}
+
+.blinking-div {
+    @include common_typography(2rem, 300, #4c4c4c, null);
+
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        @include common_typography(1rem, 200, #4c4c4c, null);
+    }
+    @media (min-width: #{$tablet-width}) and (max-width: #{$ipad-width - 1px}) {
+        @include common_typography(1.2rem, 400, #4c4c4c, null);
+    }
+    @media (min-width: #{$ipad-width}) and (max-width: #{$desktop-width - 1px}) {
+        @include common_typography(1.6rem, 400, #4c4c4c, null);
+    }
+}
+
+.nav {
+    display: none;
+}
+
+@media (max-width: #{$desktop-width}) {
+    #contact-button {
+        display: none;
+    }
+    .nav {
+        display: block;
+    }
+}
+
+button#contact-button {
+    padding: 10px;
+    background-color: #448AFF;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-holder {
+    display: inline-block;
+    width: 19%;
+    vertical-align: top;
+    text-align: end;
+    vertical-align: middle;
+
+    @media (max-width: #{$desktop-width}) {
+
+        display: block;
+        width: 100%;
+        top: -20px;
+        position: relative;
+    }
+}
+
+.logo-div {
+    display: inline-block;
+    width: 80%;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+div#contact-btn {
+    padding-right: 15px;
+}
+
+
+#introduction {
+
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 2px 0px 10px 0px #cccccc;
+    margin-top: 80px;
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        margin-top: 60px;
+    }
+}
+
+.top-bottom-space {
+    margin-top: 20px;
+}
+
+img.alexa-img-style {
+    width: 100%;
+    vertical-align: middle;
+    padding-top: 3rem;
+}
+
+img.google-home-img-style {
+    width: 100%;
+    vertical-align: middle;
+    padding-top: 3rem;
+}
+
+.tagline-style.inlineDisplay {
+    vertical-align: middle;
+    width: 38%;
+    text-align: center;
+}
+
+.alexa-img {
+    width: 29%;
+    text-align: center;
+}
+
+.google-homme-img {
+    width: 29%;
+    text-align: center;
+}
+
+.tagline-txt {
+    margin-bottom: 1%;
+
+    @include common_typography(2.5rem, 200, #4c4c4c, null);
+
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        @include common_typography(1.2rem, 200, #4c4c4c, null);
+    }
+    @media (min-width: #{$tablet-width}) and (max-width: #{$ipad-width - 1px}) {
+        @include common_typography(1.4rem, 400, #4c4c4c, null);
+    }
+    @media (min-width: #{$ipad-width}) and (max-width: #{$desktop-width - 1px}) {
+        @include common_typography(1.8rem, 400, #4c4c4c, null);
+    }
+}
+
+.text_tagline {
+    padding: 100px 0px;
+
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        padding: 50px 0px;
+        @include common_typography(2rem, 200, #6b6b6b, 2.5rem);
+    }
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        padding: 25px 0px;
+        @include common_typography(1.5rem, 200, #6b6b6b, 2rem);
+    }
+
+
+    text-align: center;
+    @include common_typography(2.5rem, 200, #6b6b6b, 3.5rem);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* feature_01 section */
+
+section#feature_01 {
+    text-align: center;
+    background: #f0f0f05e;
+    box-shadow: 2px 0px 10px 0px #cccccc;
+}
+
+.alexa_01 {
+    width: 30.5%;
+    vertical-align: middle;
+
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        width: 29.5%;
+    }
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        width: 24.5%;
+    }
+}
+
+.google_01 {
+    width: 30.5%;
+    vertical-align: middle;
+
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        width: 29.5%;
+    }
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        width: 24.5%;
+    }
+}
+
+.msg_01 {
+    width: 38%;
+    text-align: center;
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        width: 48%;
+    }
+}
+
+img.google_home_room {
+    width: 100%;
+}
+
+img.alexa_home {
+    width: 100%;
+}
+
+.heading_style {
+
+    @include common_typography(2rem, 400, #6b6b6b, 3.5rem);
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @include common_typography(1.5rem, 300, #6b6b6b, 1.5rem);
+    }
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        @include common_typography(1rem, 300, #6b6b6b, 1.2rem);
+    }
+}
+
+.subtext_style {
+
+    @include common_typography(1.5rem, 200, #6b6b6b, 3.5rem);
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @include common_typography(1rem, 300, #6b6b6b, 1.5rem);
+    }
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        @include common_typography(1rem, 300, #6b6b6b, 1.2rem);
+    }
+}
+
+.paratext_style {
+
+    @include common_typography(1rem, 200, #6b6b6b, 3.5rem);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* /* feature_01 section */
+
+section#feature_02 {
+    margin-top: 25px;
+}
+
+.alexa_02 {
+    width: 49.5%;
+    vertical-align: top;
+    position: relative;
+
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        width: 100%;
+    }
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        width: 100%;
+    }
+}
+
+.google_02 {
+    width: 49.5%;
+    vertical-align: top;
+    position: relative;
+
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        width: 100%;
+    }
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        width: 100%;
+    }
+}
+
+img.alexa-speaking {
+    width: 100%;
+    border-radius: 5px;
+}
+
+img.google-speaking {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.question {
+    background: white;
+    padding: 10px 5px 10px 15px;
+    border-radius: 6px;
+    width: 70%;
+}
+
+.question-home {
+    color: #6b6c6d;
+}
+
+.question-alexa {
+    color: #0292c1;
+}
+
+.cmn-txt-style {
+
+    @include common_typography(0.9rem, 300, null, 1.3rem);
+}
+
+.overlay-txt-home {
+    position: absolute;
+    top: 70px;
+    left: 200px;
+
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        top: 150px;
+        left: 300px;
+    }
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        top: 45px;
+        left: 30px;
+    }
+}
+
+.answer {
+    margin-top: 10px;
+    display: block;
+}
+
+img.assistant-style {
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 10%;
+}
+
+span.assistant-logo {
+    vertical-align: top;
+}
+
+.overlay-txt-alexa {
+    position: absolute;
+    top: 175px;
+    left: 225px;
+
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        top: 100px;
+        left: 300px;
+    }
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        top: 80px;
+        left: 85px;
+    }
+}
+
+
+span.assistant-answer {
+
+    @include va-reply-style(#6b6c6d);
+}
+
+span.alexa-answer {
+
+    @include va-reply-style(#0292c1);
+}
+
+img.alexa-skills {
+    width: 10%;
+    border-radius: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* =======  app-extension ============*/
+
+.left-side-msg {
+    width: 25%;
+    vertical-align: middle;
+    text-align: center;
+
+    @include common_typography(2.5rem, 400, #6b6c6d, 3rem);
+
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @include common_typography(1.5rem, 400, #6b6c6d, 2rem);
+        width: 29%;
+    }
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        @include common_typography(1.2rem, 400, #6b6c6d, 2rem);
+        width: 28%;
+    }
+}
+
+.right-side-msg {
+    width: 25%;
+    vertical-align: middle;
+    text-align: center;
+
+    @include common_typography(2.5rem, 400, #6b6c6d, 3rem);
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @include common_typography(1.5rem, 400, #6b6c6d, 2rem);
+        width: 29%;
+    }
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        @include common_typography(1.2rem, 400, #6b6c6d, 2rem);
+        width: 28%;
+    }
+}
+
+.all-applications-img {
+    width: 49%;
+    vertical-align: middle;
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        width: 40%;
+    }
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        width: 40%;
+    }
+}
+
+img.all-possibilities {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=================== Branding options ======================*/
+
+.branding-class {
+    padding: 100px 0px;
+    text-align: center;
+
+    @include common_typography(2.5rem, 200, #6b6c6d, 3.5rem);
+
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        padding: 50px 0px;
+        @include common_typography(1.8rem, 200, #6b6c6d, 2.5rem);
+    }
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        padding: 50px 0px;
+        @include common_typography(1.8rem, 200, #6b6c6d, 2.5rem);
+    }
+}
+
+
+
+
+
+/*================ id: amazon-scenarios =========================*/
+
+section#amazon-scenarios {
+    text-align: center;
+    box-shadow: 2px 0px 10px 0px #cccccc;
+}
+
+.amazon-alexa-side {
+    width: 49.5%;
+    display: inline-block;
+
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        width: 100%;
+    }
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        width: 100%;
+    }
+}
+
+.caraousal-holder {
+    width: 49.5%;
+    display: inline-block;
+
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        width: 100%;
+    }
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        width: 100%;
+    }
+}
+
+.alexa-slide-1 {
+    width: 100%;
+}
+
+.slick-arrow {
+    display: none !important;
+}
+
+.slider-amazon-img {
+    vertical-align: top;
+}
+
+.overlay-txt-slider {
+    position: absolute;
+    top: 35px;
+    left: 350px;
+
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        left: 200px;
+    }
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        left: 300px;
+    }
+}
+
+.overlay-txt-slider-spec {
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        top: 70px;
+        left: 15px;
+    }
+}
+
+.question-special2 {
+    background: white;
+    padding: 10px 5px 10px 15px;
+    border-radius: 6px;
+    width: 75%;
+    text-align: left;
+}
+
+.question-special1 {
+    background: white;
+    padding: 10px 5px 10px 15px;
+    border-radius: 6px;
+    width: 70%;
+}
+/*================== ======================*/
+
+
+#subscribe-div {
+    text-align: center;
+    padding: 80px 0px;
+    background-color: #f3f3f375;
+}
+
+.email-txtbox {
+    text-align: center;
+    padding: 0px 20%;
+}
+
+.email-subscribe-txt {
+    margin-bottom: 20px;
+    @include common_typography(2rem, 200, #6b6c6d, null);
+}
+
+.subscribe-txtbox {
+    margin-bottom: 20px;
+}
+
+
+/*=================== ============================*/
+
+.message-icon::after {
+    font-family: fontawesome;
+    content: "\f003";
+    color: #6b6b6b;
+    font-size: 3.5rem;
+    cursor: pointer;
+}
+
+.contact-heading {
+    @include common_typography(2rem, 200, #6b6c6d, null);
+}
+
+.contact-form {
+    vertical-align: top;
+    display: inline-block;
+    width: 49.5%;
+
+    @media (max-width: #{$desktop-width}) {
+        display: block;
+        width: 100%;
+        margin-top: 50px;
+    }
+}
+
+.contact-typography {
+    vertical-align: top;
+    display: inline-block;
+    width: 49.5%;
+    @media (max-width: #{$desktop-width}) {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.lbl-form {
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+
+    @include common_typography(1rem, 200, #6b6c6d, null);
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        display: block;
+        width: 50%;
+    }
+}
+
+button#send-button,
+#subscribe-button {
+    padding: 15px 40px;
+    background-color: #448AFF;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.amazon-tech-img{
+    width: 49.5%;
+    display: inline-block;
+
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        width: 100%;
+        display: block;
+    }
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        width: 100%;
+        display: block;
+    }
+}
+.google-tech-img{
+    width: 49.5%;
+    display: inline-block;
+
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        width: 100%;
+        display: block;
+    }
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        width: 100%;
+        display: block;
+    }
+}
+.tech-img{
+    width: 100%;
+}
+.text-arch{
+    @include common_typography(2.4rem, 200, #6b6c6d, null);
+    text-align: center;
+    padding: 20px 0px;
+
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        @include common_typography(1.4rem, 200, #6b6c6d, null);
+         padding: 10px 0px;
+    }
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @include common_typography(2rem, 200, #6b6c6d, null);
+        padding: 15px 0px;
+    }
+      
+}
+
+
+
+.send-btn-holder {
+    text-align: center;
+    margin-top: 40px;
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        text-align: center;
+    }
+}
+
+.row-style {
+    margin: 10px 0px;
+}
+
+section#contact-us {
+    margin: 200px 15px 100px;
+    @media (max-width: #{$desktop-width}) {
+        margin: 50px 100px 50px;
+    }
+}
+
+textarea.form-input {
+    height: 100px;
+    padding: 5px;
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        height: 70px;
+    }
+}
+
+.form-input {
+    width: 75%;
+    height: 30px;
+    padding: 0px 5px;
+    border-radius: 4px;
+    @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+        width: 100%;
+    }
+}
+
+.required-style {
+    background-color: #fff3ee;
+}
+
+.icon-align {
+    text-align: center;
+    position: relative;
+    left: -20%;
+    top: 25px;
+    @media (max-width: #{$desktop-width}) {
+        left: 0;
+    }
+}
+
+#footer {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.hr-color {
+    color: #6b6c6d
+}
+
+.footer-txt {
+    @include common_typography(0.4rem, 200, #6b6c6d, null);
+    padding-bottom: 20px;
+}
+
+
+/*========================= Modal Dialog ========================*/
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+//======================================================================================

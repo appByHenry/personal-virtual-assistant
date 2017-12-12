@@ -21,8 +21,11 @@ $(function() {
 
         if (scroll >= 20) {
             $("#top-header").addClass("scroll-class");
+            $("#top-header").addClass("border-class-top");
+            
         } else {
             $("#top-header").removeClass("scroll-class");
+            $("#top-header").removeClass("border-class-top");
         }
     });
     var selectedEffect = "bounce";
@@ -190,13 +193,12 @@ $(function() {
 
     }
 
-
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
         }
-    }
+    };  
 
 
     $(document).on("click", "#send-button", function() {
