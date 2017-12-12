@@ -207,6 +207,7 @@ section#top-header {
 }
 
 .blinking-div {
+    display: none;
     @include common_typography(2rem, 300, #4c4c4c, null);
 
     @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {

@@ -21,17 +21,16 @@ $(function() {
 
         if (scroll >= 20) {
             $("#top-header").addClass("scroll-class");
-            $("#top-header").addClass("border-class-top");
+            $("#top-header").removeClass("border-class-top");
             
         } else {
             $("#top-header").removeClass("scroll-class");
-            $("#top-header").removeClass("border-class-top");
+            $("#top-header").addClass("border-class-top");
         }
     });
     var selectedEffect = "bounce";
 
     var myInterval = setInterval(function() {
-
         //$('.overlay-txt > .blinking-div').toggle(selectedEffect, null, 500);
     }, 2000);
 
@@ -47,7 +46,7 @@ $(function() {
             .show('slow'); // and show it
 
         counter++;
-    }; // function to loop through divs and show correct div
+    } // function to loop through divs and show correct div
 
     showDiv(); // show first div    
 

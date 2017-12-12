@@ -147,6 +147,7 @@ section#top-header {
   display: none; }
 
 .blinking-div {
+  display: none;
   font-size: 2rem;
   font-family: sans-serif;
   font-variant: common-ligatures;
