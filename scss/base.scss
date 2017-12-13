@@ -242,18 +242,19 @@ section#top-header {
     display: none;
 }
 
+
 .blinking-div {
     display: none;
     @include common_typography(2rem, 300, #4c4c4c, null);
 
     @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
-        @include common_typography(1rem, 200, #4c4c4c, null);
+        @include common_typography(0.8rem, 200, #4c4c4c, null);
     }
     @media (min-width: #{$tablet-width}) and (max-width: #{$ipad-width - 1px}) {
-        @include common_typography(1.2rem, 400, #4c4c4c, null);
+        @include common_typography(1rem, 400, #4c4c4c, null);
     }
     @media (min-width: #{$ipad-width}) and (max-width: #{$desktop-width - 1px}) {
-        @include common_typography(1.6rem, 400, #4c4c4c, null);
+        @include common_typography(1.5rem, 400, #4c4c4c, null);
     }
 }
 
