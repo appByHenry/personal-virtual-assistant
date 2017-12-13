@@ -221,6 +221,11 @@ $(function() {
         }
     };  
 
+     $(document).on("click", "#contact-button", function() {
+        $('html,body').animate({
+        scrollTop: $("#contact-us").offset().top},
+        'slow');
+     });
 
     $(document).on("click", "#send-button", function() {
         console.log("Make a call to store data");
